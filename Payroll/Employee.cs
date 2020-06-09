@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Payroll
 {
-    abstract class Employee
+   public abstract class Employee
     {
 		protected int age;
 		protected int employeeId;
@@ -26,8 +26,7 @@ namespace Payroll
 		{
 			get { return name; }
 		}
-		protected Employee()
-		{ }
+		public Employee() { }
 		protected Employee(string firstN, string lastN, int _age, int _employeeId)
 		{
 			name = lastN + ", " + firstN;
@@ -43,7 +42,5 @@ namespace Payroll
 			takeHomePay = weeklyPay - (FICA + federalIncomeTax);
 			return takeHomePay.ToString("C");
 		}
-
-		
 	}
 }

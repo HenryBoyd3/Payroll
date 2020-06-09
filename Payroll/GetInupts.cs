@@ -4,10 +4,11 @@ using System.Text;
 
 namespace Payroll
 {
-    static class GetInupts
+    public static class GetInupts
     {
-        public static decimal parseDec()
+        public static decimal parseDec(string Message)
         {
+            Console.WriteLine(Message);
             decimal number;
             while (true)
             {
@@ -23,10 +24,10 @@ namespace Payroll
             }
         }
 
-        public static string parseString()
+        public static string parseString(string message)
         {
-
-            return "a";
+            Console.WriteLine(message);
+            return Console.ReadLine();
         }
     }
 }
